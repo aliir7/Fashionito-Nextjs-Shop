@@ -24,6 +24,10 @@
   .wrapper {
     @apply px-[8%] lg:px-[16%];
   }
+
+  .container {
+    @apply px-[8%] lg:px-[10%] lg:ps-[16%] py-10;
+  }
 }
 
 .yekanBakh {
@@ -35,7 +39,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
+/* Navbar-start */
 @layer components {
   .menu-link a {
     font-weight: 600;
@@ -63,6 +67,212 @@ body {
     100% {
       transform: translateY(0px);
       opacity: 1;
+    }
+  }
+
+  /* Hero header */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+  }
+
+  .btn::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.582), #ffffff00);
+    transition: none;
+    z-index: -1;
+  }
+
+  .btn:hover::after {
+    left: 100%;
+    transition: 0.8s;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 78%;
+    background: var(--gradient);
+    z-index: -1;
+    border-radius: 125px 30px 30px 30px;
+  }
+
+  .hero-shape1 {
+    position: absolute;
+    top: 21%;
+    right: 0;
+    width: 161px;
+    height: 35px;
+    background-image: url("../public/assets/wave-shape-1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-shape2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 35px;
+    transform: rotate(180deg);
+    background-image: url("../public/assets/wave-shape-1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-shape3 {
+    position: absolute;
+    top: 10%;
+    right: -15%;
+    width: 100px;
+    height: 100px;
+    background-image: url("../public/assets/hero-shape4.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: Anim-rotate 5s infinite linear;
+  }
+
+  .hero-shape4 {
+    position: absolute;
+    top: 85%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background-image: url("../public/assets/hero-shape3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: Anim-rotate 5s infinite linear;
+  }
+
+  .border-shape1 {
+    border: 1px solid #dfdfdf;
+    position: absolute;
+    top: 10%;
+    left: -8%;
+    width: 61%;
+    height: 54%;
+    border-radius: 150px 0 0 0;
+    z-index: -1;
+  }
+
+  .border-shape2 {
+    border: 1px solid #dfdfdf;
+    position: absolute;
+    bottom: -7%;
+    right: 1%;
+    width: 50%;
+    height: 35%;
+    border-radius: 0 0 50px 0;
+    z-index: -1;
+  }
+
+  .star-shape1 {
+    position: absolute;
+    top: -2%;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-image: url("../public/assets/hero-shape2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: Anim-rotate 5s infinite forwards linear;
+  }
+
+  .star-shape2 {
+    position: absolute;
+    top: 40%;
+    left: -4%;
+    width: 70px;
+    height: 70px;
+    background-image: url("../public/assets/hero-shape2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: Anim-rotate 6s infinite forwards linear;
+  }
+
+  .star-shape3 {
+    position: absolute;
+    top: 75%;
+    right: -14%;
+    width: 70px;
+    height: 70px;
+    background-image: url("../public/assets/hero-shape2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: Anim-rotate 6s infinite forwards linear;
+  }
+
+  @keyframes Anim-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Media Query Section For Shapes */
+  @media (max-width: 991px) {
+    .star-shape2 {
+      top: 35%;
+    }
+
+    .star-shape3 {
+      top: 83%;
+      right: -9%;
+    }
+
+    .hero-shape3 {
+      top: 1%;
+      right: 84%;
+    }
+
+    .hero-shape4 {
+      top: 34%;
+      right: 78%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .login-link {
+      display: flex;
+    }
+
+    .hero-shape1 {
+      width: 156px;
+      height: 30px;
+    }
+
+    .hero-shape3,
+    .hero-text-wrap {
+      display: none;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .hero-content h3 {
+      font-size: 2.5rem;
+    }
+
+    .login-link,
+    .hero-shape1,
+    .hero-shape4 {
+      display: none;
     }
   }
 }

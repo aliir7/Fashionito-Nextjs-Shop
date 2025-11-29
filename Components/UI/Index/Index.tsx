@@ -1,5 +1,11 @@
+import Hero from "./Hero/Hero";
+
 function Index() {
-  return <div>Index</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default Index;

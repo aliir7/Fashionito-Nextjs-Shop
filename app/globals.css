@@ -34,3 +34,35 @@ body {
   background-color: #fffaf3;
   overflow-x: hidden;
 }
+
+/* Navbar */
+@layer components {
+  .menu-link a {
+    font-weight: 600;
+    transition: var(--transition-regular);
+  }
+  .menu-link a:hover {
+    color: var(--secondary);
+  }
+
+  .fixed-nav {
+    animation: Anim-fixed var(--transition-slow) forwards linear;
+    box-shadow: 0 2px 10px rgba(131, 131, 131, 0.6);
+    z-index: 9999;
+  }
+
+  .fixed-nav .nav-button {
+    padding: 25px 20px !important;
+  }
+
+  @keyframes Anim-fixed {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}

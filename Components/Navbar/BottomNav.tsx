@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Activity } from "react";
 import menuDotImg from "@/public/assets/Menu-dot.svg";
 import { navLinks } from "@/constants";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
-import { RiMenLine, RiArrowDownSLine } from "react-icons/ri";
+import { RiMenuLine, RiArrowDownSLine } from "react-icons/ri";
 
 function BottomNav() {
   const [isFixed, setIsFixed] = useState(false);
@@ -15,18 +15,17 @@ function BottomNav() {
     {}
   );
 
-  // is fixed handler with scrolling
   useEffect(() => {
     const handleScroll = () => setIsFixed(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // toggle dropdown handler
   const toggleDropdown = (label: string) => {
-    setOpenDropdowns((perv) => ({
-      ...Object.fromEntries(Object.keys(perv).map((key) => [key, false])),
-      [label]: !perv[label],
+    setOpenDropdowns((prev) => ({
+      ...Object.fromEntries(Object.keys(prev).map((k) => [k, false])),
+      [label]: !prev[label],
     }));
   };
 
@@ -50,7 +49,7 @@ function BottomNav() {
         {/* mobile logo */}
         <Link
           href="/"
-          className="text-3xl lg:text-4xl font-bold text-black block lg:hidden"
+          className="text-2xl me-4 lg:text-4xl font-bold text-black block lg:hidden"
         >
           Fashion<span className="text-secondary">ito</span>
         </Link>
@@ -87,11 +86,12 @@ function BottomNav() {
             )
           )}
         </nav>
+
         {/* Right Icon */}
         <div className="flex items-center gap-5">
           <Link
             href="/login"
-            className="login-link border-b border-gray-400 font-semibold"
+            className="login-link hidden lg:flex border-b border-gray-400 font-semibold"
           >
             ورود / ثبت نام
           </Link>
@@ -104,42 +104,51 @@ function BottomNav() {
             </Link>
           </div>
         </div>
+
         {/* Mobile Menu Button */}
-        <div className="flex items-center justify-between gap-4 lg:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            type="button"
-            className="text-2xl focus:outline-none"
-          >
-            <RiMenLine />
-          </button>
-        </div>
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          type="button"
+          className="text-3xl lg:hidden"
+        >
+          <RiMenuLine />
+        </button>
       </div>
-      {/* Mobile Menu start */}
-      {mobileMenuOpen && (
+
+      {/* Mobile Menu */}
+      <Activity mode={mobileMenuOpen ? "visible" : "hidden"}>
         <div className="lg:hidden border-t bg-white border-gray-200 mt-3 transition-all duration-500">
-          <nav className="flex flex-col px-[4%] py-3 space-y-1">
+          <nav className="flex flex-col px-4 py-2">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.label} className="flex flex-col">
+                  {/* parent */}
                   <button
                     type="button"
-                    className="w-full flex items-center justify-between"
                     onClick={() => toggleDropdown(link.label)}
+                    className="w-full flex items-center justify-between py-3 text-sm font-medium"
                   >
                     {link.label}
-                    <RiArrowDownSLine />
+                    <RiArrowDownSLine
+                      className={`text-xl transition-transform ${
+                        openDropdowns[link.label] ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
+
+                  {/* dropdown */}
                   <div
-                    className={`overflow-hidden transition-all duration-500`}
+                    className={`overflow-hidden transition-all duration-500 ${
+                      openDropdowns[link.label] ? "max-h-96" : "max-h-0"
+                    }`}
                   >
-                    <div className="flex flex-col space-y-1 p-2 bg-primary">
+                    <div className="flex flex-col bg-white space-y-1 py-2 px-2">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.label}
                           href={item.href}
-                          className="px-2 py-1 bg-white"
-                          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="py-1 px-2 text-sm border-b border-gray-200"
                         >
                           {item.label}
                         </Link>
@@ -151,8 +160,8 @@ function BottomNav() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="p-2 block hover:text-white font-medium rounded-md"
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 text-sm block rounded-md font-medium"
                 >
                   {link.label}
                 </Link>
@@ -160,8 +169,7 @@ function BottomNav() {
             )}
           </nav>
         </div>
-      )}
-      {/* mobile menu down */}
+      </Activity>
     </div>
   );
 }

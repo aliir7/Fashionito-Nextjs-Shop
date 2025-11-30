@@ -39,7 +39,7 @@ function BottomNav() {
         {/* desktop logo */}
         <Link
           href="/"
-          className={`text-3xl lg:text-4xl font-bold text-black ${
+          className={`text-3xl lg:text-4xl font-bold text-black hidden ${
             isFixed ? "lg:flex" : "hidden"
           }`}
         >

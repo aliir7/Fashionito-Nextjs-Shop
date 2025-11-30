@@ -18,39 +18,39 @@ function Hero() {
           {/* Hero Content Section */}
           <div className="w-full lg:w-1/2">
             <div className="hero-content">
-              <h3 className="text-5xl md:text-7xl lg:text-[5rem] font-semibold">
-                Your Ultimate
+              <h3 className="text-4xl md:text-5xl my-4 lg:text-[4rem] font-semibold">
+                همه‌چیز اینجاست
               </h3>
               <div className="flex items-center gap-2">
                 <Image src={heroShape1} alt="hero-shape1" />
-                <h3 className="text-5xl md:text-7xl lg:text-[5rem] font-semibold text-secondary">
-                  Online Store
+                <h3 className="text-4xl md:text-5xl lg:text-[4rem] mb-4 font-semibold text-secondary">
+                  فروشگاه اینترنتی
                 </h3>
               </div>
               <h3 className="text-4xl md:text-5xl lg:text-[4rem] font-semibold">
-                For All Your Needs
+                برای زندگی بهتر
               </h3>
-              <p className="mt-3 text-xl md:text-2xl">
-                No code need Plus free, shipping on
-                <span className="text-secondary">$99+</span>orders!
+              <p className="mt-4 text-xl md:text-2xl">
+                ارسال رایگان برای سفارش‌های بالای
+                <span className="text-secondary">۵۰۰٬۰۰۰ تومان</span>
               </p>
               {/* Cta Button */}
               <div className="flex items-center gap-5 mt-5">
                 <Link href="/Shop/12">
                   <button
                     type="button"
-                    className="btn border border-black hover:bg-black hover:text-white cursor-pointer text-xl px-6 py-3 rounded-md transition-all duration-300"
+                    className="btn border border-black hover:bg-black hover:text-white cursor-pointer text-sm lg:text-xl px-6 py-3 rounded-md transition-all duration-300"
                   >
-                    View Details
+                    مشاهده جزئیات
                   </button>
                 </Link>
 
                 <Link href="/Shop">
                   <button
                     type="button"
-                    className="btn bg-black text-white cursor-pointer text-xl px-6 py-3 rounded-md transition-all duration-300"
+                    className="btn bg-black text-white cursor-pointer text-sm lg:text-xl px-6 py-3 rounded-md transition-all duration-300"
                   >
-                    Our Shop
+                    برو به فروشگاه
                   </button>
                 </Link>
               </div>
@@ -73,16 +73,18 @@ function Hero() {
                   className="rounded-2xl"
                 />
                 <div className="w-full lg:w-1/2 relative">
-                  <h3 className="font-semibold">Cozy Knit Cardigan</h3>
-                  <h3 className="font-semibold mt-2 text-secondary">$40</h3>
-                  <div className="absolute -bottom-2 left-0 bg-secondary hover:bg-primary hover:text-black cursor-pointer text-white py-2 px-3 rounded-full transition-all duration-300">
+                  <h3 className="font-semibold">بافتنی راحت کتان</h3>
+                  <h3 className="font-semibold mt-2 text-secondary">۶۵۰٬۰۰۰</h3>
+                  <div className="absolute -bottom-2 left-0 bg-secondary hover:bg-primary hover:text-black cursor-pointer text-white py-2 px-2 rounded-full transition-all duration-300">
                     <BsBasket />
                   </div>
                 </div>
               </div>
               {/*  hero text wrap */}
               <div className="absolute top-120 -right-10 z-10 hero-text-wrap shadow-2xl backdrop-blur-2xl bg-[#ffffff8e] px-5 py-4 flex items-center gap-2 rounded-md">
-                <BsBalloonHeart className="text-2xl bg-secondary hover:bg-primary text-white hover:text-black px-3 py-2 rounded-full transition-all duration-300 cursor-pointer" />
+                <div className="text-2xl bg-secondary hover:bg-primary text-white hover:text-black px-2 py-2 rounded-full transition-all duration-300 cursor-pointer">
+                  <BsBalloonHeart />
+                </div>
                 <div className="flex me-2">
                   <Image
                     width={60}

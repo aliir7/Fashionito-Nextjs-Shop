@@ -39,11 +39,11 @@ function BottomNav() {
         {/* desktop logo */}
         <Link
           href="/"
-          className={`text-3xl lg:text-4xl font-bold text-black hidden ${
+          className={`text-3xl lg:text-4xl  font-bold text-black hidden ${
             isFixed ? "lg:flex" : "hidden"
           }`}
         >
-          Fashion<span className="text-secondary">ito</span>
+          <span className="text-secondary">ito</span>Fashion
         </Link>
 
         {/* mobile logo */}
@@ -60,8 +60,8 @@ function BottomNav() {
             link.dropdown ? (
               <div key={link.label} className="relative group">
                 <Link href={link.href} className="flex items-center gap-1">
-                  {link.label}
                   <Image src={menuDotImg} alt="menu-icon" />
+                  {link.label}
                 </Link>
                 <div className="absolute left-0 top-full hidden group-hover:block bg-white p-2 border border-gray-100 rounded-lg min-w-[170px]">
                   {link.dropdown.map((item) => (
@@ -80,8 +80,8 @@ function BottomNav() {
               </div>
             ) : (
               <Link key={link.label} href={link.href} className="flex gap-2">
-                {link.label}
                 <Image src={menuDotImg} alt="menu-icon" />
+                {link.label}
               </Link>
             )
           )}

@@ -8,10 +8,9 @@ function Trending() {
       <div className="wrapper py-20">
         <div className="flex flex-col md:flex-row justify-between gap-5">
           <div className="">
-            <h3 className="text-3xl font-medium">What's Trending now</h3>
+            <h3 className="text-3xl font-medium">این روزا ترند چیه؟</h3>
             <p className="text-lg mt-2">
-              Discover the most trending products in Fashion
-              <span className="text-secondary">ito</span>
+              پرفروش‌ترین و محبوب‌ترین‌های این فصل رو ببین
             </p>
           </div>
           <div>

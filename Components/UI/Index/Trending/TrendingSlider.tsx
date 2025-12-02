@@ -61,12 +61,13 @@ function TrendingSlider() {
                   {product.off}
                 </span>
                 <div className="absolute flex flex-col gap-2 top-5 left-5">
-                  <div
+                  <button
+                    type="button"
                     onClick={() => addToWishlist(product)}
                     className="product-icon h-10 w-10 flex items-center justify-center text-white bg-black/40 rounded-full cursor-pointer"
                   >
                     <BsBalloonHeart />
-                  </div>
+                  </button>
                   <div className="product-icon h-10 w-10 flex items-center justify-center text-white bg-black/40 rounded-full cursor-pointer">
                     <BsCart3 />
                   </div>

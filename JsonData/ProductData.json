@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "کت و شلوار شیک",
+    "image": "/product-1.webp",
+    "price": "۱,۲۰۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "لباس"
+  },
+  {
+    "id": 2,
+    "title": "پیراهن چهارخانه",
+    "image": "/product-2.webp",
+    "price": "۴۸۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "پوشاک"
+  },
+  {
+    "id": 3,
+    "title": "پیراهن ساده",
+    "image": "/product-3.webp",
+    "price": "۳۸۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "پوشاک"
+  },
+  {
+    "id": 4,
+    "title": "لگینگ ورزشی",
+    "image": "/product-4.webp",
+    "price": "۵۲۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "کاپشن"
+  },
+  {
+    "id": 5,
+    "title": "شلوارک جین",
+    "image": "/product-5.webp",
+    "price": "۴۵۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "کاپشن"
+  },
+  {
+    "id": 6,
+    "title": "پالتو پشمی",
+    "image": "/product-6.webp",
+    "price": "۱,۸۵۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "کاپشن"
+  },
+  {
+    "id": 7,
+    "title": "شلوار جاگر",
+    "image": "/product-7.webp",
+    "price": "۵۹۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "پوشاک"
+  },
+  {
+    "id": 8,
+    "title": "کاپشن ضدآب",
+    "image": "/product-8.webp",
+    "price": "۷۵۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "کاپشن"
+  },
+  {
+    "id": 9,
+    "title": "جین اسکینی",
+    "image": "/product-9.webp",
+    "price": "۶۴۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "پوشاک"
+  },
+  {
+    "id": 10,
+    "title": "کلاه فدورا",
+    "image": "/product-10.webp",
+    "price": "۲۲۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "لباس"
+  },
+  {
+    "id": 11,
+    "title": "بوت جیر",
+    "image": "/product-11.webp",
+    "price": "۱,۲۸۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "لباس"
+  },
+  {
+    "id": 12,
+    "title": "کفش کوهستان",
+    "image": "/product-12.webp",
+    "price": "۹۲۰,۰۰۰ تومان",
+    "off": "۲۰٪ تخفیف",
+    "category": "لباس‌رویی"
+  }
+]

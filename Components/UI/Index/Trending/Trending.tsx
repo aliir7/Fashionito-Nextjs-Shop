@@ -1,3 +1,7 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import TrendingSlider from "./TrendingSlider";
+
 function Trending() {
   return (
     <section>
@@ -10,8 +14,18 @@ function Trending() {
               <span className="text-secondary">ito</span>
             </p>
           </div>
+          <div>
+            <button
+              type="button"
+              className="btn bg-black px-6 py-3 text-lg text-white rounded-md transition-all duration-300 cursor-pointer"
+            >
+              مشاهده همه
+            </button>
+          </div>
         </div>
+        <TrendingSlider />
       </div>
+      <ToastContainer position="top-left" autoClose={1500} />
     </section>
   );
 }

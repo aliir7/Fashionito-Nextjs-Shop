@@ -7,7 +7,7 @@ import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
 
-import ProductData from "@/JsonData/ProductData.json";
+import ProductData from "@/lib/JsonData/ProductData.json";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
 
 import { useWishlistStore } from "@/lib/stores/wishlistStore";
@@ -23,7 +23,7 @@ function TrendingSlider() {
         spaceBetween={20}
         loop={true}
         autoplay={{
-          delay: 1800,
+          delay: 2000,
         }}
         modules={[Autoplay]}
         breakpoints={{

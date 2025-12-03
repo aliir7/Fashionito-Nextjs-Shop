@@ -7,6 +7,8 @@ import menuDotImg from "@/public/assets/Menu-dot.svg";
 import { navLinks } from "@/lib/constants";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
 import { RiMenuLine, RiArrowDownSLine } from "react-icons/ri";
+import { useWishlistStore } from "@/lib/stores/wishlistStore";
+import Badge from "../UI/Badge";
 
 function BottomNav() {
   const [isFixed, setIsFixed] = useState(false);
@@ -14,6 +16,8 @@ function BottomNav() {
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>(
     {}
   );
+
+  const wishlistCount = useWishlistStore((state) => state.wishlistCount);
 
   useEffect(() => {
     const handleScroll = () => setIsFixed(window.scrollY > 50);
@@ -98,6 +102,9 @@ function BottomNav() {
           <div className="flex items-center gap-6">
             <Link href="/Wishlist" className="relative">
               <BsBalloonHeart className="text-3xl" />
+              <Activity mode={wishlistCount > 0 ? "visible" : "hidden"}>
+                <Badge count={wishlistCount} />
+              </Activity>
             </Link>
             <Link href="/Cart" className="relative">
               <BsCart3 className="text-3xl" />

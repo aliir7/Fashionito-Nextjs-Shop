@@ -24,7 +24,11 @@ function Trending() {
         </div>
         <TrendingSlider />
       </div>
-      <ToastContainer position="top-left" autoClose={1500} />
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        style={{ padding: "8px" }}
+      />
     </section>
   );
 }

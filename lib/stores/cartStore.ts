@@ -1,6 +1,6 @@
+import type { Product, Cart } from "@/types/types";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { Product, Cart } from "@/types/types";
 
 type CartMap = Record<string, number>;
 

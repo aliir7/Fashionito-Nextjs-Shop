@@ -11,10 +11,13 @@ import ProductData from "@/lib/JsonData/ProductData.json";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
 
 import { useWishlistStore } from "@/lib/stores/wishlistStore";
+import { useCartStore } from "@/lib/stores/cartStore";
 
 function TrendingSlider() {
   // Add to Wishlist
   const addToWishlist = useWishlistStore((state) => state.addToWishlist);
+  // Add to cart
+  const addToCart = useCartStore((state) => state.addToCart);
 
   return (
     <div className="trending-swiper my-20">
@@ -55,9 +58,13 @@ function TrendingSlider() {
                   >
                     <BsBalloonHeart />
                   </button>
-                  <div className="product-icon h-10 w-10 flex items-center justify-center text-white bg-black/40 rounded-full cursor-pointer">
+                  <button
+                    type="button"
+                    onClick={() => addToCart(product)}
+                    className="product-icon h-10 w-10 flex items-center justify-center text-white bg-black/40 rounded-full cursor-pointer"
+                  >
                     <BsCart3 />
-                  </div>
+                  </button>
                 </div>
                 <div className="relative right-0 -bottom-1 lg:absolute lg:bottom-18 lg:right-10">
                   <Link href={`/Shop/${product.id}`}>

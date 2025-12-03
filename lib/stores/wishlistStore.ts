@@ -5,9 +5,9 @@ import type { Product } from "@/types/types";
 
 type WishlistState = {
   wishlistItems: Product[];
-  wishlistCount: number;
   addToWishlist: (product: Product) => void;
   removeFromWishlist: (id: number) => void;
+  isInWishlist: (id: number) => boolean;
 };
 
 export const useWishlistStore = create<WishlistState>()(
@@ -15,10 +15,10 @@ export const useWishlistStore = create<WishlistState>()(
     (set, get) => ({
       // initial states
       wishlistItems: [],
-      wishlistCount: 0,
 
+      // add to list
       addToWishlist: (product) => {
-        const exists = get().wishlistItems.find(
+        const exists = get().wishlistItems.some(
           (item) => item.id === product.id
         );
 
@@ -26,29 +26,25 @@ export const useWishlistStore = create<WishlistState>()(
           toast.info("محصول در لیست علاقه‌مندی‌ها وجود دارد");
           return;
         }
-        set((state) => {
-          const newWishlist = [...state.wishlistItems, product];
+        set((state) => ({
+          wishlistItems: [...state.wishlistItems, product],
+        }));
 
-          toast.success("محصول به لیست علاقه‌مندی اضافه شد");
-
-          return {
-            wishlistItems: newWishlist,
-            wishlistCount: newWishlist.length,
-          };
-        });
+        toast.success("محصول به لیست علاقه‌مندی اضافه شد");
       },
-      // remove from Wishlist
-      removeFromWishlist: (id) =>
-        set((state) => {
-          const newWishlist = state.wishlistItems.filter((p) => p.id !== id);
 
-          toast.info("محصول از علاقه‌مندی‌ها حذف شد");
+      // remove from list
+      removeFromWishlist: (id) => {
+        set((state) => ({
+          wishlistItems: state.wishlistItems.filter((p) => p.id !== id),
+        }));
+        toast.info("محصول از علاقه‌مندی حذف شد");
+      },
 
-          return {
-            wishlistItems: newWishlist,
-            wishlistCount: newWishlist.length,
-          };
-        }),
+      // is in list
+      isInWishlist: (id) => {
+        return get().wishlistItems.some((product) => product.id === id);
+      },
     }),
     { name: "wishlist" }
   )

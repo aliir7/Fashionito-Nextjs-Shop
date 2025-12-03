@@ -9,6 +9,7 @@ import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
 import { RiMenuLine, RiArrowDownSLine } from "react-icons/ri";
 import { useWishlistStore } from "@/lib/stores/wishlistStore";
 import Badge from "../UI/Badge";
+import { useCartStore } from "@/lib/stores/cartStore";
 
 function BottomNav() {
   const [isFixed, setIsFixed] = useState(false);
@@ -17,7 +18,13 @@ function BottomNav() {
     {}
   );
 
-  const wishlistCount = useWishlistStore((state) => state.wishlistCount);
+  // get wishlist items from wishlistStore
+  const wishlistItems = useWishlistStore((state) => state.wishlistItems);
+  const wishlistCount = wishlistItems.length;
+
+  // get cart items from cartStore
+  const cartItems = useCartStore((state) => state.cartItems);
+  const cartCount = cartItems.length;
 
   useEffect(() => {
     const handleScroll = () => setIsFixed(window.scrollY > 50);
@@ -106,8 +113,12 @@ function BottomNav() {
                 <Badge count={wishlistCount} />
               </Activity>
             </Link>
+
             <Link href="/Cart" className="relative">
               <BsCart3 className="text-3xl" />
+              <Activity mode={cartCount > 0 ? "visible" : "hidden"}>
+                <Badge count={cartCount} />
+              </Activity>
             </Link>
           </div>
         </div>

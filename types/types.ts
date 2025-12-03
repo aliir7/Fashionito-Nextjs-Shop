@@ -13,6 +13,4 @@ export type Product = {
   category: string;
 };
 
-export type Cart = Product & {
-  quantity: number;
-};
+export type CartItem = Product & { quantity: number };

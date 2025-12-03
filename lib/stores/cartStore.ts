@@ -1,76 +1,85 @@
-import type { Product, Cart } from "@/types/types";
+import { toast } from "react-toastify";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-type CartMap = Record<string, number>;
+import type { Product, CartItem } from "@/types/types";
+import { parsePrice } from "../utils/parsePrice";
 
 type CartState = {
-  // states
-  cartItems: CartMap;
-  total: number;
-  // actions
-  addToCart: (id: string, qty?: number) => void;
-  removeFromCart: (id: string, qty?: number) => void;
-  deleteItemFromCart: (id: string) => void;
+  cartItems: CartItem[];
+  addToCart: (product: Product, qty?: number) => void;
+  decreaseFromCart: (id: number) => void;
+  removeFromCart: (id: number) => void;
   clearCart: () => void;
-  getCartArray: (products: Product[]) => Cart[];
-  // getTotalPrice: (products: Product[]) => number;
+  getTotalPrice: () => number;
 };
 
 export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
-      // initial states
-      cartItems: {},
-      total: 0,
+      // initial state
+      cartItems: [],
 
-      addToCart: (id, qty = 1) => {
-        const { cartItems, total } = get();
-        const items = { ...cartItems };
-        items[id] = (items[id] ?? 0) + qty;
-        set({ cartItems: items, total: total + qty });
-      },
-
-      removeFromCart: (id, qty = 1) => {
-        const { cartItems, total } = get();
-        if (!cartItems[id]) return;
-        const items = { ...cartItems };
-        items[id] = Math.max(0, items[id] - qty);
-        if (items[id] === 0) delete items[id];
-        set({ cartItems: items, total: Math.max(0, total - qty) });
-      },
-
-      deleteItemFromCart: (id) => {
-        const { cartItems, total } = get();
-        const count = cartItems[id] ?? 0;
-        if (!count) return;
-        const items = { ...cartItems };
-        delete items[id];
-        set({ cartItems: items, total: Math.max(0, total - count) });
-      },
-
-      clearCart: () => set({ cartItems: {}, total: 0 }),
-
-      getCartArray: (products: Product[]) => {
-        const { cartItems } = get();
-        const arr: Cart[] = [];
-        for (const [id, qty] of Object.entries(cartItems)) {
-          const prod = products.find((p) => p.id === +id);
-          if (prod) arr.push({ ...prod, quantity: qty });
+      // new item add to card
+      addToCart: (product, qty) => {
+        // check for existing item
+        const items = get().cartItems;
+        const index = items.findIndex((item) => item.id === product.id);
+        if (index !== -1) {
+          // increase quantity
+          const updated = [...items];
+          updated[index].quantity += qty ?? 1;
+          set({ cartItems: updated });
+          toast.success("محصول به سبد خرید اضافه شد");
+          return;
         }
-        return arr;
+        // if item not exist add new item
+        set({
+          cartItems: [...items, { ...product, quantity: qty ?? 1 }],
+        });
+
+        toast.success("محصول به سبد خرید اضافه شد");
       },
 
-      // getTotalPrice: (products: Product[]) => {
-      //   const { cartItems } = get();
-      //   return Object.entries(cartItems).reduce((acc, [id, qty]) => {
-      //     const prod = products.find((p) => p.id === +id);
-      //     return prod ? acc + prod.price * qty : acc;
-      //   }, 0);
-      // },
+      // decrease item from cart
+      decreaseFromCart: (id) => {
+        const items = get().cartItems;
+        const index = items.findIndex((item) => item.id === id);
+        if (index === -1) return;
+
+        // decrease item
+        const updated = [...items];
+        updated[index].quantity -= 1;
+
+        if (updated[index].quantity <= 0) {
+          updated.splice(index, 1);
+        }
+        set({ cartItems: updated });
+      },
+
+      // remove item from cart
+      removeFromCart: (id) => {
+        const items = get().cartItems;
+        set({
+          cartItems: items.filter((item) => item.id !== id),
+        });
+
+        // show toast to client
+        toast.done("محصول از سبد حذف شد");
+      },
+
+      // remove all items from card
+      clearCart: () => {
+        set({ cartItems: [] });
+      },
+
+      // get total price cart
+      getTotalPrice: () => {
+        return get().cartItems.reduce((sum, item) => {
+          const price = parsePrice(item.price);
+          return sum + item.quantity * price;
+        }, 0);
+      },
     }),
-    {
-      name: "cart-storage",
-    }
+    { name: "cart" }
   )
 );

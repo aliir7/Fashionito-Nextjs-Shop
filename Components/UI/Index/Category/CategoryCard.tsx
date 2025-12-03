@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { categoryCardData } from "@/constants";
+import { categoryCardData } from "@/lib/constants";
 
 function CategoryCard() {
   return (

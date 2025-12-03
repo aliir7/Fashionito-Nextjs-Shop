@@ -12,3 +12,7 @@ export type Product = {
   off: string;
   category: string;
 };
+
+export type Cart = Product & {
+  quantity: number;
+};

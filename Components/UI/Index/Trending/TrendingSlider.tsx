@@ -9,26 +9,13 @@ import Link from "next/link";
 
 import ProductData from "@/JsonData/ProductData.json";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
-import type { Product } from "@/types/types";
-import { toast } from "react-toastify";
+
+import { useWishlistStore } from "@/lib/stores/wishlistStore";
 
 function TrendingSlider() {
-  // Add to Wishlist handler
-  const addToWishlist = (product: Product) => {
-    const stored = localStorage.getItem("wishlist");
-    const wishlist = stored ? JSON.parse(stored) : [];
+  // Add to Wishlist
+  const addToWishlist = useWishlistStore((state) => state.addToWishlist);
 
-    const exist = wishlist.find((item: Product) => item.id === product.id);
-
-    if (exist) {
-      toast.info("محصول در لیست علاقه‌مندی ها وجود دارد");
-      return;
-    }
-
-    wishlist.push(product);
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    toast.success("محصول به لیست علاقه‌مندی اضافه شد");
-  };
   return (
     <div className="trending-swiper my-20">
       <Swiper
@@ -76,7 +63,7 @@ function TrendingSlider() {
                   <Link href={`/Shop/${product.id}`}>
                     <button
                       type="button"
-                      className="btn bg-black text-white cursor-pointer text-lg px-6 py-3 w-full lg:w-auto rounded-2xl lg:rounded-full border-3 border-white"
+                      className="btn bg-black mt-4 lg:mt-0 text-white cursor-pointer text-lg px-6 py-3 w-full lg:w-auto rounded-2xl lg:rounded-full border-3 border-white"
                     >
                       جزئیات محصول
                     </button>
@@ -86,7 +73,7 @@ function TrendingSlider() {
               <Link href={`/Shop/${product.id}`}>
                 <div className="product-content mt-5 md:mt-10 z-10">
                   <div className="flex justify-between">
-                    <h3 className="font-medium text-lg pl-5">
+                    <h3 className="font-medium text-lg lg:px-6 pr-5">
                       {product.title}
                     </h3>
                     <h3 className="font-semibold text-lg">{product.price}</h3>

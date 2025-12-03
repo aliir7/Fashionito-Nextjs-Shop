@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, Activity } from "react";
 import menuDotImg from "@/public/assets/Menu-dot.svg";
-import { navLinks } from "@/constants";
+import { navLinks } from "@/lib/constants";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
 import { RiMenuLine, RiArrowDownSLine } from "react-icons/ri";
 

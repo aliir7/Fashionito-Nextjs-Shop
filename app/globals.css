@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/* @import "@splidejs/react-splide/css"; */
 :root {
   --primary: #feeb9d;
   --primary-light: #fdfbf0;
@@ -348,6 +348,46 @@ body {
 
   .product-card:hover .product-image img {
     transform: scale(1.1);
+  }
+
+  /*Trending-End */
+
+  /* Banner Section-Start */
+
+  .banner {
+    position: relative;
+    height: 100dvh;
+    width: 100%;
+    background-image: url("../public/assets/Banner-1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .banner-shop-img {
+    position: absolute;
+    top: 50%;
+    right: 37.5%;
+    transform: translate(-50%, -50%);
+    animation: rotate 5s infinite forwards linear;
+  }
+
+  .banner-play-img {
+    position: absolute;
+    top: 50%;
+    right: 50.5%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .splide__slide {
+    width: max-content;
   }
 
   /* Media Query Section  */

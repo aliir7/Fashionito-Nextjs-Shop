@@ -5,13 +5,14 @@ import circleImg from "@/public/assets/banner-shop-circle.png";
 import starShape from "@/public/assets/star-shape.svg";
 import playIcon from "@/public/assets/banner-play-icon.png";
 
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import "@splidejs/react-splide/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-import { categoryCardData } from "@/lib/constants";
+import { categories } from "@/lib/constants";
 
 function Banner() {
+  const duplicatedData = [...categories, ...categories];
   return (
     <section>
       <div className="banner relative">
@@ -32,40 +33,33 @@ function Banner() {
             className="banner-play-img"
           />
         </div>
+
         {/* banner slider */}
-        <div className="w-full overflow-hidden">
-          <Splide
-            options={{
-              type: "loop",
-              drag: "free",
-              focus: "center",
-              arrows: false,
-              pagination: false,
-              autoWidth: true,
-              gap: "40px",
-              speed: 1,
-              autoScroll: {
-                speed: 1,
-                pauseOnHover: false,
-                pauseOnFocus: false,
-              },
+        <div className="w-full overflow-hidden relative bg-primary py-5 -rotate-2">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={12}
+            slidesPerView={6}
+            loop={true}
+            freeMode={true}
+            speed={1000}
+            autoplay={{ delay: 0, disableOnInteraction: false }}
+            breakpoints={{
+              0: { slidesPerView: 2, spaceBetween: 8 },
+              480: { slidesPerView: 3, spaceBetween: 12 },
+              768: { slidesPerView: 4, spaceBetween: 16 },
+              1024: { slidesPerView: 6, spaceBetween: 12 },
             }}
-            extensions={{ AutoScroll }}
           >
-            {categoryCardData.map((item) => (
-              <SplideSlide key={item.id}>
-                <h3 className="text-2xl flex items-center gap-3 font-bold">
-                  <Image
-                    src={starShape}
-                    alt="star-shape-slider"
-                    width={60}
-                    height={60}
-                  />
-                  {item.title}
+            {duplicatedData.map((title, idx) => (
+              <SwiperSlide key={idx} className="w-auto">
+                <h3 className="text-2xl flex items-center gap-2 font-bold whitespace-nowrap">
+                  <Image src={starShape} alt="star" width={32} height={32} />
+                  {title}
                 </h3>
-              </SplideSlide>
+              </SwiperSlide>
             ))}
-          </Splide>
+          </Swiper>
         </div>
       </div>
     </section>

@@ -368,26 +368,26 @@ body {
   .banner-shop-img {
     position: absolute;
     top: 50%;
-    right: 37.5%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    animation: rotate 5s infinite forwards linear;
+    animation: rotate 5s linear infinite;
   }
 
   .banner-play-img {
     position: absolute;
     top: 50%;
-    right: 50.5%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    pointer-events: none; /* اگر play فقط دکوراتیوه */
   }
 
   @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
     100% {
       transform: translate(-50%, -50%) rotate(360deg);
     }
-  }
-
-  .splide__slide {
-    width: max-content;
   }
 
   /* Media Query Section  */

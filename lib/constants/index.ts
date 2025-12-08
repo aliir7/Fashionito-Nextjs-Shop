@@ -79,3 +79,12 @@ export const categoryCardData = [
     image: categoryImg6,
   },
 ];
+
+export const categories = [
+  "ژاکت",
+  "شلوارجین",
+  "پیراهن",
+  "دامن",
+  "تیشرت",
+  "پالتو",
+];

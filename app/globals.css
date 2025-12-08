@@ -418,6 +418,10 @@ body {
     .category-wrap .category-card:nth-child(2) {
       padding-bottom: 0;
     }
+
+    .banner {
+      background-position: 20% center;
+    }
   }
 
   @media (max-width: 575px) {
@@ -462,6 +466,14 @@ body {
 
     .category-wrap .category-card:nth-child(6) {
       display: none;
+    }
+
+    .banner {
+      background-position: 20% center;
+    }
+
+    .popular-product .product-image {
+      height: 100% !important;
     }
   }
 

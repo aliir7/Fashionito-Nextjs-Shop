@@ -35,7 +35,7 @@ function Banner() {
         </div>
 
         {/* banner slider */}
-        <div className="w-full overflow-hidden relative bg-primary py-5 -rotate-2">
+        <div className="w-full overflow-hidden absolute bottom-[5%] left-0 bg-primary py-5 -rotate-2">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={12}
@@ -51,11 +51,11 @@ function Banner() {
               1024: { slidesPerView: 6, spaceBetween: 12 },
             }}
           >
-            {duplicatedData.map((title, idx) => (
+            {duplicatedData.map((cat, idx) => (
               <SwiperSlide key={idx} className="w-auto">
-                <h3 className="text-2xl flex items-center gap-2 font-bold whitespace-nowrap">
+                <h3 className="text-2xl flex items-center gap-1 font-bold whitespace-nowrap">
                   <Image src={starShape} alt="star" width={32} height={32} />
-                  {title}
+                  {cat.label}
                 </h3>
               </SwiperSlide>
             ))}

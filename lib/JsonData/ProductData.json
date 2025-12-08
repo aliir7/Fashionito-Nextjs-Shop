@@ -5,7 +5,7 @@
     "image": "/product-1.webp",
     "price": "۱,۲۰۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "لباس"
+    "category": "jacket"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "image": "/product-2.webp",
     "price": "۴۸۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "پوشاک"
+    "category": "shirt"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "image": "/product-3.webp",
     "price": "۳۸۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "پوشاک"
+    "category": "shirt"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "image": "/product-4.webp",
     "price": "۵۲۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "کاپشن"
+    "category": "jeans"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "image": "/product-5.webp",
     "price": "۴۵۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "کاپشن"
+    "category": "jeans"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "image": "/product-6.webp",
     "price": "۱,۸۵۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "کاپشن"
+    "category": "coat"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "image": "/product-7.webp",
     "price": "۵۹۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "پوشاک"
+    "category": "jeans"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "image": "/product-8.webp",
     "price": "۷۵۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "کاپشن"
+    "category": "jacket"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "image": "/product-9.webp",
     "price": "۶۴۰,۰۰۰ تومان",
     "off": "۲۰٪ تخفیف",
-    "category": "پوشاک"
+    "category": "skirt"
   },
   {
     "id": 10,

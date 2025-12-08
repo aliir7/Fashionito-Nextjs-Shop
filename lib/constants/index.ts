@@ -81,10 +81,9 @@ export const categoryCardData = [
 ];
 
 export const categories = [
-  "ژاکت",
-  "شلوارجین",
-  "پیراهن",
-  "دامن",
-  "تیشرت",
-  "پالتو",
+  { label: "ژاکت", value: "jacket" },
+  { label: "شلوارجین", value: "jeans" },
+  { label: "پیراهن", value: "shirt" },
+
+  { label: "پالتو", value: "coat" },
 ];

@@ -534,19 +534,8 @@ body {
 
     /* ۲- انیمیشن‌های سنگینِ CSS خاموش */
     .banner-shop-img,
-    .banner-play-img,
-    .hero-shape3,
-    .hero-shape4,
-    .star-shape1,
-    .star-shape2,
-    .star-shape3 {
+    .banner-play-img {
       animation: none !important;
-    }
-
-    /* ۳- ترجمه‌های سنگین */
-    .hero-shape3,
-    .hero-shape4 {
-      transform: none !important;
     }
   }
   /* ----------  END DEBUG  ---------- */

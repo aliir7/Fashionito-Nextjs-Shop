@@ -520,6 +520,37 @@ body {
     }
   }
 
+  /* ----------  DEBUG Mobile Jank  ---------- */
+  @media (max-width: 768px) {
+    /* ۱- هر چیزی که rotate یا fixed attachment داره */
+    .banner {
+      background-attachment: scroll !important;
+      transform: none !important;
+    }
+    .banner-slider-layer {
+      transform: none !important; /* rotate -2deg موقتاً off */
+      will-change: auto !important;
+    }
+
+    /* ۲- انیمیشن‌های سنگینِ CSS خاموش */
+    .banner-shop-img,
+    .banner-play-img,
+    .hero-shape3,
+    .hero-shape4,
+    .star-shape1,
+    .star-shape2,
+    .star-shape3 {
+      animation: none !important;
+    }
+
+    /* ۳- ترجمه‌های سنگین */
+    .hero-shape3,
+    .hero-shape4 {
+      transform: none !important;
+    }
+  }
+  /* ----------  END DEBUG  ---------- */
+
   @media (max-width: 575px) {
     .login-link {
       display: flex;

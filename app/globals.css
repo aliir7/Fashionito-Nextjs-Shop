@@ -390,6 +390,95 @@ body {
     }
   }
 
+  /* Banner Section-End */
+
+  /* Companies Section-Start */
+
+  .companies-banner {
+    position: relative;
+    background: var(--gradient);
+    border-radius: 50px;
+  }
+
+  .companies-banner::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 0;
+    width: 300px;
+    height: 50px;
+    background-image: url("../public/assets/wave-shape-1.svg");
+    background-repeat: no-repeat;
+  }
+
+  .companies-banner::before {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    transform: rotate(180deg);
+    width: 300px;
+    height: 50px;
+    background-image: url("../public/assets/wave-shape-1.svg");
+    background-repeat: no-repeat;
+  }
+
+  .company-shape {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    padding: 30px;
+    padding-top: 3%;
+    z-index: 1;
+  }
+
+  .company-shape img:nth-child(1) {
+    background-color: #000;
+    border-radius: 100%;
+    animation: Anim-rotate 10s infinite linear;
+  }
+
+  .company-shape img:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .company-shape::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    z-index: -1;
+  }
+
+  .company-card:hover img {
+    animation: Anim-fade 0.7s forwards linear;
+  }
+
+  @keyframes Anim-fade {
+    0% {
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
   /* Media Query Section  */
   @media (max-width: 991px) {
     .star-shape2 {

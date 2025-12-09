@@ -1,8 +1,5 @@
 "use client";
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 import ProductData from "@/lib/JsonData/ProductData.json";
 import { useEffect, useRef } from "react";
 import { categories } from "@/lib/constants";

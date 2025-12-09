@@ -1,6 +1,7 @@
 import PopularProducts from "../Product/PopularProducts";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
+import Companies from "./Companies/Companies";
 import Hero from "./Hero/Hero";
 import Trending from "./Trending/Trending";
 
@@ -12,6 +13,7 @@ function Index() {
       <Trending />
       <Banner />
       <PopularProducts />
+      <Companies />
     </>
   );
 }

@@ -7,6 +7,15 @@ import categoryImg4 from "@/public/assets/Category-4.webp";
 import categoryImg5 from "@/public/assets/Category-5.webp";
 import categoryImg6 from "@/public/assets/Category-6.webp";
 
+import companyImg1 from "@/public/assets/company-1.webp";
+import companyImg2 from "@/public/assets/company-2.webp";
+import companyImg3 from "@/public/assets/company-3.webp";
+import companyImg4 from "@/public/assets/company-4.webp";
+import companyImg5 from "@/public/assets/company-5.webp";
+import companyImg6 from "@/public/assets/company-6.webp";
+import companyImg7 from "@/public/assets/company-7.webp";
+import companyImg8 from "@/public/assets/company-8.webp";
+
 export const navLinks: NavLink[] = [
   {
     label: "خانه",
@@ -86,4 +95,15 @@ export const categories = [
   { label: "پیراهن", value: "shirt" },
 
   { label: "پالتو", value: "coat" },
+];
+
+export const companies = [
+  companyImg1,
+  companyImg2,
+  companyImg3,
+  companyImg4,
+  companyImg5,
+  companyImg6,
+  companyImg7,
+  companyImg8,
 ];

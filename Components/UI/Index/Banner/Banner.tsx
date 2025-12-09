@@ -35,7 +35,7 @@ function Banner() {
         </div>
 
         {/* banner slider */}
-        <div className="w-full overflow-hidden absolute bottom-[5%] left-0 bg-primary py-5 -rotate-2">
+        <div className="banner-slider-layer absolute bottom-[5%] left-0 w-full overflow-hidden bg-primary py-5">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={12}

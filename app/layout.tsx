@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/Components/Navbar/Navbar";
+import Footer from "@/Components/Footer/Footer";
 
 const yekanBakh = localFont({
   src: [
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className={`${yekanBakh.className}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

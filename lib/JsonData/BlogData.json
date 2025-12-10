@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "image": "/blog-1.webp",
+    "title": "ترندسازان: جدیدترین نگاه‌ها در دنیای مد",
+    "smallTitle": "ترندسازان و مد روز",
+    "date": "5 بهمن 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "/blog-2.webp",
+    "title": "گشت‌وگذار در کت‌واک: بهترین استایل‌های هفته‌ی مد",
+    "smallTitle": "کت‌واک و استایل برتر",
+    "date": "10 بهمن 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/blog-3.webp",
+    "title": "کمد لوکس: پشت صحنه‌ی زندگی یک فشن‌بلاگر",
+    "smallTitle": "کمد لوکس و بلاگر مد",
+    "date": "27 دی 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/blog-4.webp",
+    "title": "مد به‌روز: معرفی طراحان نوظهور",
+    "smallTitle": "طراحان نوظهور مد",
+    "date": "20 دی 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/blog-5.webp",
+    "title": "اکسسوری قدرتمند: جلوه‌ی قطعات بیانیه‌ای",
+    "smallTitle": "اکسسوری‌های بیانیه‌ای",
+    "date": "29 دی 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "/blog-7.webp",
+    "title": "کمد پایدار: رویکردی سبز به دنیای مد",
+    "smallTitle": "مد پایدار و سبز",
+    "date": "2 خرداد 1404",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "/blog-8.webp",
+    "title": "کوتور دست‌ساز: شاهکارهایی که خودت می‌سازی",
+    "smallTitle": "دوخت دستی و دی‌آی‌وی",
+    "date": "29 دی 1403",
+    "gallery": [
+      "/public/blog-gallery-1.webp",
+      "/public/blog-gallery-2.webp",
+      "/public/blog-gallery-3.webp",
+      "/public/blog-gallery-4.webp",
+      "/public/blog-gallery-5.webp"
+    ]
+  }
+]

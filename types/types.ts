@@ -13,4 +13,13 @@ export type Product = {
   category: string;
 };
 
+export type Blog = {
+  id: number;
+  image: string;
+  title: string;
+  smallTitle: string;
+  date: string;
+  gallery: string[];
+};
+
 export type CartItem = Product & { quantity: number };

@@ -1,3 +1,4 @@
+import BlogSection from "../Blogs/BlogSection";
 import PopularProducts from "../Product/PopularProducts";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
@@ -14,6 +15,7 @@ function Index() {
       <Banner />
       <PopularProducts />
       <Companies />
+      <BlogSection />
     </>
   );
 }

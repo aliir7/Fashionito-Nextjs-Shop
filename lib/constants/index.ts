@@ -16,6 +16,13 @@ import companyImg6 from "@/public/assets/company-6.webp";
 import companyImg7 from "@/public/assets/company-7.webp";
 import companyImg8 from "@/public/assets/company-8.webp";
 
+import instaImg1 from "@/public/assets/insta-1.webp";
+import instaImg2 from "@/public/assets/insta-2.webp";
+import instaImg3 from "@/public/assets/insta-3.webp";
+import instaImg4 from "@/public/assets/insta-4.webp";
+import instaImg5 from "@/public/assets/insta-5.webp";
+import instaImg6 from "@/public/assets/insta-6.webp";
+
 export const navLinks: NavLink[] = [
   {
     label: "خانه",
@@ -106,4 +113,13 @@ export const companies = [
   companyImg6,
   companyImg7,
   companyImg8,
+];
+
+export const instaImages = [
+  instaImg1,
+  instaImg2,
+  instaImg3,
+  instaImg4,
+  instaImg5,
+  instaImg6,
 ];

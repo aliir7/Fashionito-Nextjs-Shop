@@ -3,6 +3,8 @@
 import { useCartStore } from "@/lib/stores/cartStore";
 import { useWishlistStore } from "@/lib/stores/wishlistStore";
 import { Product } from "@/types/types";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import Link from "next/link";
 import { BsBalloonHeart, BsCart3 } from "react-icons/bs";
@@ -70,6 +72,11 @@ function ProductCard({ product, classNames }: ProductCardProps) {
           </div>
         </Link>
       </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        style={{ padding: "8px" }}
+      />
     </div>
   );
 }

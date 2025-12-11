@@ -9,8 +9,8 @@ export type Product = {
   title: string;
   image: string;
   price: string;
-  off: string;
-  category: string;
+  off?: string;
+  category?: string;
 };
 
 export type Blog = {
@@ -23,3 +23,6 @@ export type Blog = {
 };
 
 export type CartItem = Product & { quantity: number };
+
+export type FilterType = "جدیدترین" | "قدیمی‌ترین" | "ارزان‌ترین" | "گران‌ترین";
+export type CategoryType = "All" | "jacket" | "jeans" | "shirt" | "coat";

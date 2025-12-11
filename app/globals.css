@@ -575,6 +575,28 @@ body {
     transform: translate(-50%, -50%);
   }
 
+  /* Shop page Section-Start */
+  .page-section {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url("../public/assets/page-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .page-section::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+
   /* Media Query Section  */
   @media (max-width: 991px) {
     .star-shape2 {

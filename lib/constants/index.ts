@@ -100,9 +100,10 @@ export const categories = [
   { label: "ژاکت", value: "jacket" },
   { label: "شلوارجین", value: "jeans" },
   { label: "پیراهن", value: "shirt" },
-
   { label: "پالتو", value: "coat" },
-];
+
+  { label: "همه", value: "All" },
+] as const;
 
 export const companies = [
   companyImg1,

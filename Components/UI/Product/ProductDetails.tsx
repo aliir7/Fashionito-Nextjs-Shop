@@ -44,8 +44,10 @@ function ProductDetails({ product }: ProductDetailsProps) {
                 </div>
               </div>
               <p className="text-gray-600">{product.description}</p>
-              <div className="flex items-center gap-4 mt-4 justify-between">
-                <span className="text-3xl font-bold">{product.price}</span>
+              <div className="flex items-center gap-4 mt-4 lg:justify-between">
+                <span className=" text-2xl lg:text-3xl font-bold">
+                  {product.price}
+                </span>
                 <span className="text-lg px-4 py-1 rounded-full bg-black text-white">
                   {product.off}
                 </span>

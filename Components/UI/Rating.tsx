@@ -13,7 +13,7 @@ type RatingProps = {
 export default function Rating({
   rate,
   size = 18,
-  color = "#f59e0b",
+  color = "#f0b100",
   className,
 }: RatingProps) {
   const stars = Array.from({ length: 5 }, (_, i) => {
@@ -24,7 +24,9 @@ export default function Rating({
   });
 
   return (
-    <div className={cn("flex items-center gap-1", className)}>
+    <div
+      className={cn("flex items-center gap-1 rtl:flex-row-reverse", className)}
+    >
       {stars.map((type, idx) => {
         if (type === "full")
           return <BsStarFill key={idx} size={size} color={color} />;

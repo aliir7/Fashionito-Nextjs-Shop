@@ -11,6 +11,9 @@ export type Product = {
   price: string;
   off?: string;
   category?: string;
+  rating?: number;
+  reviews?: number;
+  description?: string;
 };
 
 export type Blog = {

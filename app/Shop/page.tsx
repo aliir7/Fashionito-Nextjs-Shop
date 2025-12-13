@@ -1,4 +1,5 @@
 import Breadcrumb from "@/Components/UI/Breadcrumb";
+import Follow from "@/Components/UI/Index/Follow/Follow";
 import ShopContent from "@/Components/UI/Shop/ShopContent";
 
 export default function ShopPage() {
@@ -16,6 +17,7 @@ export default function ShopPage() {
         </div>
       </div>
       <ShopContent />
+      <Follow />
     </section>
   );
 }

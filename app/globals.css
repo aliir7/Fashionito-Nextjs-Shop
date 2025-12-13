@@ -634,6 +634,10 @@ body {
     .idx-blog-wrap .idx-blog-item .blog-image {
       height: 450px;
     }
+
+    .page-section {
+      background-position: center center;
+    }
   }
 
   /* ----------  DEBUG Mobile Jank  ---------- */
@@ -721,6 +725,9 @@ body {
     .follow::before {
       height: 50px;
       bottom: -5%;
+    }
+    .page-section {
+      background-position: 65%;
     }
   }
 

@@ -149,3 +149,6 @@ export const footerLinks = [
     links: ["درباره ما", "قیمت‌ها", "تخفیف ها", "سوالات متداول", "تیم ما"],
   },
 ];
+
+// sizes
+export const sizes = ["L", "XL", "2XL"];

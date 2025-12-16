@@ -38,7 +38,7 @@ export const useWishlistStore = create<WishlistState>()(
         set((state) => ({
           wishlistItems: state.wishlistItems.filter((p) => p.id !== id),
         }));
-        toast.info("محصول از علاقه‌مندی حذف شد");
+        toast.error("محصول از علاقه‌مندی حذف شد");
       },
 
       // is in list

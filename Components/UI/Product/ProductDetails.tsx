@@ -8,6 +8,7 @@ import returnImg from "@/public/assets/pack-box.png";
 import boatImg from "@/public/assets/boat.png";
 
 import { useCartStore } from "@/lib/stores/cartStore";
+import { useWishlistStore } from "@/lib/stores/wishlistStore";
 import { useState } from "react";
 import { sizes } from "@/lib/constants";
 import { parsePrice } from "@/lib/utils/parsePrice";
@@ -16,12 +17,7 @@ import {
   RiTelegramLine,
   RiWhatsappLine,
 } from "react-icons/ri";
-import {
-  BsBalloonHeart,
-  BsCart3,
-  BsCheck2Circle,
-  BsCheckCircle,
-} from "react-icons/bs";
+import { BsBalloonHeart, BsCart3, BsCheck2Circle } from "react-icons/bs";
 
 type ProductDetailsProps = {
   product: Product;
@@ -32,6 +28,8 @@ function ProductDetails({ product }: ProductDetailsProps) {
   const [activeSize, setActiveSize] = useState<string | undefined>(sizes.at(0));
   const price = parsePrice(product.price);
   const addToCard = useCartStore((state) => state.addToCart);
+  const addToWishlist = useWishlistStore((state) => state.addToWishlist);
+
   const totalPrice = price * quantity;
   return (
     <div className="wrapper py-20">
@@ -148,24 +146,59 @@ function ProductDetails({ product }: ProductDetailsProps) {
               طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
               فارسی ایجاد کرد.
             </p>
-            <h3 className="mt-5 flex items-center gap-2 text-lg md:text-xl">
+            <h3 className="mt-5  flex items-center gap-2 text-lg">
               <div className="text-2xl text-secondary">
                 <BsCheck2Circle />
               </div>
-              Versatile, enduring style for all occasions.
+              استایل بی‌زمان، مناسب هر لحظه از روز.{" "}
             </h3>
-            <h3 className="mt-2 flex items-center gap-2 text-lg md:text-xl">
+            <h3 className="mt-2 flex items-center gap-2 text-lg">
               <div className="text-2xl text-secondary">
                 <BsCheck2Circle />
               </div>
-              Handcrafted Elegance, comfort.
+              دوخت دستی شیک، راحتی تمام‌نشدنی.{" "}
             </h3>
             {/* product features */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
+              {/* item 1 */}
+              <div className="border rounded-2xl flex flex-col justify-center items-center text-center p-4">
+                <p className="text-lg font-semibold mb-1">محصولی کارآمد</p>
+                <p className="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              {/* item2 */}
+              <div className="border rounded-2xl flex flex-col justify-center items-center text-center p-4">
+                <p className="text-lg font-semibold mb-1">
+                  مناسب برای تمام فصول
+                </p>
+                <p className="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              {/* item3 */}
+              <div className="border rounded-2xl flex flex-col justify-center items-center text-center p-4">
+                <p className="text-lg font-semibold mb-1">100% ایرانی</p>
+                <p className="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              {/* item 4 */}
+              <div className="border rounded-2xl flex flex-col justify-center items-center text-center p-4">
+                <p className="text-lg font-semibold mb-1">100% کتان</p>
+                <p className="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* payment */}
-        <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full">
+        <div className="w-full lg:w-1/2 sticky lg:top-25 mt-4 lg:mt-0 left-0 h-full">
           <div className="border rounded-2xl p-4 mr-2">
             <button
               type="button"

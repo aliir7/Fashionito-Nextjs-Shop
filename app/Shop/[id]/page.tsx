@@ -1,4 +1,5 @@
 import Breadcrumb from "@/Components/UI/Breadcrumb";
+import Follow from "@/Components/UI/Index/Follow/Follow";
 import ProductDetails from "@/Components/UI/Product/ProductDetails";
 import ProductData from "@/lib/JsonData/ProductData.json";
 
@@ -39,6 +40,7 @@ export default async function ProductDetailsPage({
         </div>
       </div>
       <ProductDetails product={product} />
+      <Follow />
     </section>
   );
 }

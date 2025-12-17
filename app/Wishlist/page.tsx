@@ -60,7 +60,6 @@ function WishlistPage() {
                     </div>
                   </div>
                 </div>
-                {/*  */}
                 <div className="mt-5 md:mt-0">
                   <p className="text-sm text-green-600 font-semibold">موجود</p>
                 </div>

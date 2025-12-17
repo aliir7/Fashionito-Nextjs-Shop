@@ -7,6 +7,8 @@ import { parsePrice } from "../utils/parsePrice";
 type CartState = {
   cartItems: CartItem[];
   addToCart: (product: Product, qty?: number) => void;
+
+  increaseQuantity: (id: number) => void;
   decreaseFromCart: (id: number) => void;
   removeFromCart: (id: number) => void;
   clearCart: () => void;
@@ -53,6 +55,18 @@ export const useCartStore = create<CartState>()(
         if (updated[index].quantity <= 0) {
           updated.splice(index, 1);
         }
+        set({ cartItems: updated });
+      },
+      // increase item quantity
+      increaseQuantity: (id) => {
+        const items = get().cartItems;
+        const index = items.findIndex((item) => item.id === id);
+        if (index === -1) return;
+
+        // increase item
+        const updated = [...items];
+        updated[index].quantity += 1;
+
         set({ cartItems: updated });
       },
 

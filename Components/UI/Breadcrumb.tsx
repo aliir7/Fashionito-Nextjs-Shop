@@ -20,12 +20,12 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
           {item.href ? (
             <Link
               href={item.href}
-              className="hover:text-primary transition-colors duration-300"
+              className="hover:text-primary transition-colors text-lg lg:text-xl duration-300"
             >
               {item.label}
             </Link>
           ) : (
-            <span>{item.label}</span>
+            <span className="text-lg lg:text-xl">{item.label}</span>
           )}
 
           {/* جداکننده فقط بین آیتم‌ها */}

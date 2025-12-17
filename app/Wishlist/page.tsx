@@ -8,7 +8,7 @@ import { useCartStore } from "@/lib/stores/cartStore";
 import Image from "next/image";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BsCart3 } from "react-icons/bs";
+import { BsCart3, BsTrash3 } from "react-icons/bs";
 import Link from "next/link";
 
 function WishlistPage() {
@@ -51,29 +51,38 @@ function WishlistPage() {
                   />
                   {/* product title */}
                   <div>
-                    <h3 className="text-xl font-semibold">{product.title}</h3>
+                    <h3 className="text-lg md:text-xl md:font-semibold">
+                      {product.title}
+                    </h3>
                     <div className="flex items-center gap-3 mt-2">
-                      <span className="text-xl font-bold">{product.price}</span>
-                      <span className="text-sm font-medium bg-black text-white px-4 py-1 rounded-full">
-                        {product.off}
+                      <span className="text-lg md:text-xl md:font-bold">
+                        {product.price}
                       </span>
+                      <div className="flex items-center gap-1 justify-center">
+                        <span className="text-xs md:text-sm text-nowrap  font-medium bg-black text-white md:px-4 px-6  md:py-1 py-2 rounded-full">
+                          {product.off}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-5 md:mt-0">
-                  <p className="text-sm text-green-600 font-semibold">موجود</p>
+                  <p className="text-xs md:text-sm text-green-600 font-semibold">
+                    موجود
+                  </p>
                 </div>
-                <div className="flex items-center gap-5 mt-5 md:mt-0">
+                <div className="flex items-center lg:flex-row flex-col md:gap-5 gap-2 mt-5 md:mt-0">
                   <button
                     type="button"
-                    className="px-6 py-3 border hover:bg-secondary hover:border-transparent hover:text-white rounded-lg md:rounded-full cursor-pointer transition-all duration-300"
+                    className="lg:px-6 px-8 py-3 text-nowrap border flex items-center gap-2 justify-center hover:bg-secondary text-sm md:text-xl hover:border-transparent hover:text-white rounded-lg md:rounded-full cursor-pointer transition-all duration-300"
                     onClick={() => removeFromWishlist(product.id)}
                   >
+                    <BsTrash3 />
                     حذف از لیست
                   </button>
                   <button
                     type="button"
-                    className="px-6 py-3 bg-black text-white rounded-lg md:rounded-full cursor-pointer"
+                    className="px-6 py-3 bg-black text-sm md:text-xl text-nowrap text-white rounded-lg md:rounded-full cursor-pointer"
                     onClick={() => addToCart(product)}
                   >
                     افزودن به سبد خرید

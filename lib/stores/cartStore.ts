@@ -78,7 +78,7 @@ export const useCartStore = create<CartState>()(
         });
 
         // show toast to client
-        toast.done("محصول از سبد حذف شد");
+        toast.error("محصول از سبد حذف شد");
       },
 
       // remove all items from card

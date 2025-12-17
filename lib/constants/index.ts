@@ -1,4 +1,4 @@
-import type { NavLink } from "@/types/types";
+import type { BlogCategory, NavLink } from "@/types/types";
 
 import categoryImg1 from "@/public/assets/Category-1.webp";
 import categoryImg2 from "@/public/assets/Category-2.webp";
@@ -40,11 +40,11 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    label: "وبلاگ‌ها",
+    label: "مقالات",
     href: "/Blogs",
     dropdown: [
-      { label: "وبلاگ‌ها", href: "/Blogs" },
-      { label: "جزئیات وبلاگ", href: "/Blogs/7" },
+      { label: "مقالات", href: "/Blogs" },
+      { label: "جزئیات مقاله", href: "/Blogs/7" },
     ],
   },
   {
@@ -152,3 +152,16 @@ export const footerLinks = [
 
 // sizes
 export const sizes = ["L", "XL", "2XL"];
+
+export const blogCategories: BlogCategory[] = [
+  { name: "دامن ها", count: 5 },
+  { name: "کلاه و پیراهن", count: 10 },
+  { name: "کفش", count: 8 },
+  { name: "زیورآلات", count: 12 },
+  { name: "آرایش", count: 13 },
+  { name: "اصلاح صورت و بدن", count: 17 },
+  { name: "مراقب پوستی", count: 7 },
+  { name: "ژاکت و پالتو", count: 4 },
+];
+
+export const blogTags = ["قدیمی", "ازدواج", "کتان", "بیزینس", "رسمی"];

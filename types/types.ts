@@ -23,6 +23,12 @@ export type Blog = {
   smallTitle: string;
   date: string;
   gallery: string[];
+  category?: BlogCategory[];
+};
+
+export type BlogCategory = {
+  name: string;
+  count: number;
 };
 
 export type CartItem = Product & { quantity: number };

@@ -597,6 +597,36 @@ body {
     z-index: -1;
   }
 
+  /* Shop page Section-End */
+
+  /* Blog page Section-Start */
+  .blog-card .blog-img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-card .blog-img::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    transition: none;
+  }
+
+  .blog-card:hover .blog-img::after {
+    transition: right 0.7s ease-out;
+    right: 120%;
+  }
+
   /* Media Query Section  */
   @media (max-width: 991px) {
     .star-shape2 {

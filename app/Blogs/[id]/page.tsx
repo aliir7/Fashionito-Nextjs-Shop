@@ -50,7 +50,7 @@ async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
         </div>
       </div>
       {/* Content */}
-      <div className="wrapper py-30 pt-10">
+      <div className="wrapper py-30 pt-10 text-justify">
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <div className="w-full lg:w-1/1">
             <h3 className="text-4xl font-semibold">{blogs.title}</h3>

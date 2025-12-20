@@ -5,6 +5,7 @@
     "title": "ترندسازان: جدیدترین نگاه‌ها در دنیای مد",
     "smallTitle": "ترندسازان و مد روز",
     "date": "5 بهمن 1403",
+    "author": "علی رضایی",
     "gallery": [
       "/public/blog-gallery-1.webp",
       "/public/blog-gallery-2.webp",
@@ -19,6 +20,8 @@
     "title": "گشت‌وگذار در کت‌واک: بهترین استایل‌های هفته‌ی مد",
     "smallTitle": "کت‌واک و استایل برتر",
     "date": "10 بهمن 1403",
+    "author": "علی رضایی",
+
     "gallery": [
       "/public/blog-gallery-1.webp",
       "/public/blog-gallery-2.webp",
@@ -33,6 +36,7 @@
     "title": "کمد لوکس: پشت صحنه‌ی زندگی یک فشن‌بلاگر",
     "smallTitle": "کمد لوکس و بلاگر مد",
     "date": "27 دی 1403",
+    "author": "علی رضایی",
     "gallery": [
       "/public/blog-gallery-1.webp",
       "/public/blog-gallery-2.webp",
@@ -47,6 +51,7 @@
     "title": "مد به‌روز: معرفی طراحان نوظهور",
     "smallTitle": "طراحان نوظهور مد",
     "date": "20 دی 1403",
+    "author": "علی رضایی",
     "gallery": [
       "/public/blog-gallery-1.webp",
       "/public/blog-gallery-2.webp",
@@ -60,6 +65,7 @@
     "image": "/blog-5.webp",
     "title": "اکسسوری قدرتمند: جلوه‌ی قطعات بیانیه‌ای",
     "smallTitle": "اکسسوری‌های بیانیه‌ای",
+    "author": "علی رضایی",
     "date": "29 دی 1403",
     "gallery": [
       "/public/blog-gallery-1.webp",
@@ -74,6 +80,7 @@
     "image": "/blog-7.webp",
     "title": "کمد پایدار: رویکردی سبز به دنیای مد",
     "smallTitle": "مد پایدار و سبز",
+    "author": "علی رضایی",
     "date": "2 خرداد 1404",
     "gallery": [
       "/public/blog-gallery-1.webp",
@@ -89,6 +96,7 @@
     "title": "کوتور دست‌ساز: شاهکارهایی که خودت می‌سازی",
     "smallTitle": "دوخت دستی و دی‌آی‌وی",
     "date": "29 دی 1403",
+    "author": "علی رضایی",
     "gallery": [
       "/public/blog-gallery-1.webp",
       "/public/blog-gallery-2.webp",

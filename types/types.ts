@@ -24,6 +24,7 @@ export type Blog = {
   date: string;
   gallery: string[];
   category?: BlogCategory[];
+  author?: string;
 };
 
 export type BlogCategory = {

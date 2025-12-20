@@ -3,14 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsChevronLeft } from "react-icons/bs";
 import BlogCategory from "./BlogCategory";
+import BlogTags from "./BlogTags";
 
 function BlogContent() {
   const posts = blogData.slice(3, 6);
   return (
     <div className="wrapper py-30 pt-10">
-      <div className="flex flex-col lg:flex-row justify-between gap-10">
+      <div className="flex flex-col-reverse lg:flex-row justify-between gap-10">
         {/* blog category */}
-        <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full">
+        <div className="w-full lg:w-1/2 lg:sticky top-25 left-0 h-full">
           <h3 className="text-xl font-semibold">دسته‌بندی</h3>
           <BlogCategory />
           {/* latest posts */}
@@ -43,6 +44,7 @@ function BlogContent() {
             </div>
           </div>
           {/* blog tags */}
+          <BlogTags />
         </div>
 
         {/* blog card */}

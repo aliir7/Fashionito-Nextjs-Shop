@@ -1,5 +1,6 @@
 import BlogContent from "@/Components/UI/Blogs/BlogContent";
 import Breadcrumb from "@/Components/UI/Breadcrumb";
+import Follow from "@/Components/UI/Index/Follow/Follow";
 
 export default function BlogsPage() {
   return (
@@ -17,6 +18,7 @@ export default function BlogsPage() {
         </div>
       </div>
       <BlogContent />
+      <Follow />
     </section>
   );
 }

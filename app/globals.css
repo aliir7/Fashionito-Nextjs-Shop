@@ -627,6 +627,30 @@ body {
     right: 120%;
   }
 
+  /* Blog page Section-End */
+
+  /* About page Section-Start */
+
+  .testimonial-img {
+    z-index: 1;
+  }
+
+  .testimonial-img::after {
+    content: "";
+    position: absolute;
+    right: -14%;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(
+      90deg,
+      #fffaf3 1.69%,
+      rgba(255, 250, 243, 0) 103.98%
+    );
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+  }
+
   /* Media Query Section  */
   @media (max-width: 991px) {
     .star-shape2 {

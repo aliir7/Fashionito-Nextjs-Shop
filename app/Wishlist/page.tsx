@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BsCart3, BsTrash3 } from "react-icons/bs";
 import Link from "next/link";
+import PageTitle from "@/Components/UI/PageTitle";
 
 function WishlistPage() {
   const { wishlistItems, removeFromWishlist } = useWishlistStore();
@@ -17,21 +18,18 @@ function WishlistPage() {
 
   return (
     <section>
-      <div className="page-section flex items-center justify-center text-center">
-        <div className="flex flex-col items-center justify-center z-10">
-          <h2 className="text-3xl lg:text-5xl font-semibold text-white">
-            علاقه‌مندی‌ها
-          </h2>
-          <Breadcrumb
-            className="mt-5"
-            items={[
-              { label: "صفحه اصلی", href: "/" },
-              { label: "فروشگاه", href: "/Shop" },
-              { label: "علاقه‌مندی‌ها" },
-            ]}
-          />
-        </div>
-      </div>
+      {/* Page Title Section */}
+      <PageTitle title="علاقه‌مندی‌ها">
+        <Breadcrumb
+          className="mt-5"
+          items={[
+            { label: "صفحه اصلی", href: "/" },
+            { label: "فروشگاه", href: "/Shop" },
+            { label: "علاقه‌مندی‌ها" },
+          ]}
+        />
+      </PageTitle>
+
       <div className="px-[8%] lg:px-[20%] py-20">
         {wishlistItems.length > 0 ? (
           <div className="flex flex-col gap-10">

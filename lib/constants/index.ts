@@ -54,8 +54,7 @@ export const navLinks: NavLink[] = [
     href: "#",
     dropdown: [
       { label: "درباره ما", href: "/About" },
-      { label: "جدول قیمت‌ها", href: "/Pricing" },
-      { label: "کارت هدیه", href: "/GiftVoucher" },
+
       { label: "سوالات متداول", href: "/Faq" },
       { label: "ورود", href: "/Login" },
       { label: "ثبت‌نام", href: "/Registration" },

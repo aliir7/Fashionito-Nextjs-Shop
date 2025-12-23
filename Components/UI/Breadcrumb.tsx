@@ -1,26 +1,38 @@
-// components/Breadcrumb.tsx
 import Link from "next/link";
 import { RiArrowLeftWideLine } from "react-icons/ri";
 
-export type BreadcrumbItem = {
+type BreadcrumbItem = {
   label: string;
-  href?: string; // اگر href نداشته باشد، لینک نمی‌شود (آیتم آخر)
+  href?: string;
 };
 
 type BreadcrumbProps = {
   items: BreadcrumbItem[];
   className?: string;
+  changeTextColor?: boolean;
+  onHover?: string;
 };
 
-export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
+export default function Breadcrumb({
+  items,
+  className = "",
+  changeTextColor = false,
+  onHover = "",
+}: BreadcrumbProps) {
   return (
-    <nav className={`flex items-center gap-2 text-xl text-white ${className}`}>
+    <nav
+      className={`flex items-center gap-2 text-xl ${
+        changeTextColor === false && "text-white"
+      } ${className}`}
+    >
       {items.map((item, idx) => (
         <div key={idx} className="flex items-center gap-2">
           {item.href ? (
             <Link
               href={item.href}
-              className="hover:text-primary transition-colors text-lg lg:text-xl duration-300"
+              className={`${
+                changeTextColor === false && "hover:text-primary"
+              } transition-colors text-lg lg:text-xl duration-300 ${onHover}`}
             >
               {item.label}
             </Link>

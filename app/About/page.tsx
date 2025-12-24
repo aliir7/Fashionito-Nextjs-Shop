@@ -24,11 +24,12 @@ function AboutPage() {
           ]}
         />
       </PageTitle>
+
       {/* Page Content */}
       <div className="wrapper py-20">
+        {/* Intro */}
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-1/2 text-justify">
-            {/* about texts */}
             <h3 className="text-3xl font-bold text-black mb-6">
               فَشنیتو؛ جایی که استایل، کیفیت و شخصیتِ تو کنار هم می‌درخشند. با
               هم دنیای مد را دوباره می‌سازیم — نه فقط لباس، بلکه حسِ بودنِ
@@ -36,28 +37,28 @@ function AboutPage() {
             </h3>
             <p className="text-gray-500">
               در فَشنیتو، ما داریم دنیای مد را دوباره می‌سازیم؛ جایی که استایل،
-              کیفیت و شخصیتِ منحصربه‌فرد تو در هر دوخت دیده می‌شود. باور داریم
-              لباسِ تو باید آینه‌ی ارزش‌ها و رویاهات باشد — همین حالا، همین
-              لحظه.
+              کیفیت و شخصیتِ منحصربه‌فرد تو در هر دوخت دیده می‌شود.
             </p>
           </div>
-          {/* about images */}
+
+          {/* Images */}
           <div className="w-full lg:w-1/2">
-            <div className="about-image flex gap-5 h-[250px]">
+            <div className="about-image flex gap-5 h-[250px] overflow-hidden">
               <Image
                 src={aboutImg1}
                 alt="about-image-1"
-                className="rounded-2xl"
+                className="rounded-2xl object-cover w-full max-w-full min-w-0"
               />
               <Image
                 src={aboutImg2}
                 alt="about-image-2"
-                className="rounded-2xl"
+                className="rounded-2xl object-cover w-full max-w-full min-w-0"
               />
             </div>
           </div>
         </div>
-        {/* about author & faq */}
+
+        {/* Author & FAQ */}
         <div className="flex flex-col-reverse lg:flex-row gap-8 py-6">
           <div className="w-full lg:w-1/2">
             <div className="about-author flex items-center gap-5 text-right">
@@ -71,52 +72,57 @@ function AboutPage() {
               <div className="mt-2">
                 <h3 className="text-xl font-bold text-black flex flex-col gap-2">
                   علی احمدی
-                  <span className="text-sm text-black font-normal">
+                  <span className="text-sm font-normal">
                     بنیان‌گذار و مدیرعامل
                   </span>
                 </h3>
               </div>
             </div>
-            {/* FAQ Section */}
+
             <FAQ />
           </div>
+
+          {/* aboutImg4 — fix horizontal scroll on mobile */}
           <div className="w-full lg:w-1/2">
-            <div className="about-image">
+            <div className="about-image overflow-hidden">
               <Image
                 src={aboutImg4}
                 alt="about-image-4"
-                className="object-cover rounded-2xl h-full w-full"
+                className="rounded-2xl object-cover w-full max-w-full h-auto"
               />
             </div>
           </div>
         </div>
-        {/* experience */}
+
+        {/* Experience */}
         <div className="flex flex-col-reverse lg:flex-row lg:gap-8 py-6">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
             <div className="about-section flex gap-25">
               <div className="about-heading">
-                <h3 className="text-5xl text-black font-bold">50+</h3>
-                <span className="text-black text-xl">محصول برای فروش</span>
+                <h3 className="text-5xl font-bold">50+</h3>
+                <span className="text-xl">محصول برای فروش</span>
               </div>
               <div className="about-heading">
-                <h3 className="text-5xl text-black font-bold">%100</h3>
-                <span className="text-black text-xl">رضایت مشتریان</span>
+                <h3 className="text-5xl font-bold">%100</h3>
+                <span className="text-xl">رضایت مشتریان</span>
               </div>
             </div>
           </div>
-          {/* about image 5 */}
-          <div className="w-full lg:w-1/2">
+
+          {/* aboutImg5 — more vertical space on mobile */}
+          <div className="w-full lg:w-1/2 mt-12 lg:mt-0">
             <div className="about-image">
               <Image
                 src={aboutImg5}
                 alt="about-image-5"
-                className="rounded-2xl"
+                className="rounded-2xl w-full h-auto"
               />
             </div>
           </div>
         </div>
       </div>
-      {/* testimonials */}
+
+      {/* Testimonials */}
       <Testimonials />
     </section>
   );

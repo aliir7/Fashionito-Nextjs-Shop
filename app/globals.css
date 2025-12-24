@@ -651,6 +651,21 @@ body {
     z-index: -1;
   }
 
+  /* About page Section-End */
+
+  /* Contact page Section-Start */
+  .contact-form {
+    position: absolute;
+    top: 80%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  /* Contact page Section-End */
+
   /* Media Query Section  */
   @media (max-width: 991px) {
     .star-shape2 {
@@ -691,6 +706,11 @@ body {
 
     .page-section {
       background-position: center center;
+    }
+
+    .contact-form {
+      position: static;
+      transform: translate(0%, 0%);
     }
   }
 

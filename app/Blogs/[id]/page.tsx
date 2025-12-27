@@ -13,6 +13,11 @@ import BlogCategory from "@/Components/UI/Blogs/BlogCategory";
 import Link from "next/link";
 import Follow from "@/Components/UI/Index/Follow/Follow";
 import PageTitle from "@/Components/UI/PageTitle";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "جزئیات مقاله",
+};
 
 type BlogDetailsPageProps = {
   params: Promise<{ id: string }>;

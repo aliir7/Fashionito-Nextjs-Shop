@@ -2,6 +2,11 @@ import Breadcrumb from "@/Components/UI/Breadcrumb";
 import Follow from "@/Components/UI/Index/Follow/Follow";
 import PageTitle from "@/Components/UI/PageTitle";
 import ShopContent from "@/Components/UI/Shop/ShopContent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "فروشگاه",
+};
 
 export default function ShopPage() {
   return (

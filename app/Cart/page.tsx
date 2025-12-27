@@ -12,6 +12,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Follow from "@/Components/UI/Index/Follow/Follow";
 import PageTitle from "@/Components/UI/PageTitle";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "سبد خرید",
+};
 
 function CartPage() {
   const {

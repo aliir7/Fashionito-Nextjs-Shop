@@ -26,7 +26,10 @@ const yekanBakh = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "فشنیتو",
+  title: {
+    template: `فشنیتو | %s `,
+    default: "فشنیتو",
+  },
   description: "فشنیتو - آنلاین شاپ لباس",
 };
 

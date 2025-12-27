@@ -1,7 +1,12 @@
 import Breadcrumb from "@/Components/UI/Breadcrumb";
 import FAQ from "@/Components/UI/FAQ";
 import faqImg from "@/public/assets/faq-img.webp";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "سوالات متداول",
+};
 
 export default function FAQPage() {
   return (

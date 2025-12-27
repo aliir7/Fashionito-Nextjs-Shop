@@ -10,6 +10,11 @@ import aboutImg5 from "@/public/assets/about-5.webp";
 
 import FAQ from "@/Components/UI/FAQ";
 import Testimonials from "@/Components/UI/Testimonials";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "درباره ما",
+};
 
 function AboutPage() {
   return (
@@ -29,15 +34,14 @@ function AboutPage() {
       <div className="wrapper py-20">
         {/* Intro */}
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="w-full lg:w-1/2 text-justify">
+          <div className="w-full lg:w-1/2">
             <h3 className="text-3xl font-bold text-black mb-6">
-              فَشنیتو؛ جایی که استایل، کیفیت و شخصیتِ تو کنار هم می‌درخشند. با
-              هم دنیای مد را دوباره می‌سازیم — نه فقط لباس، بلکه حسِ بودنِ
-              متفاوت.
+              فشنیتو؛ جایی که استایل، کیفیت و شخصیت تو کنار هم می‌درخشند. با هم
+              دنیای مد را دوباره می‌سازیم. نه فقط لباس، بلکه حسِ بودن متفاوت.
             </h3>
             <p className="text-gray-500">
-              در فَشنیتو، ما داریم دنیای مد را دوباره می‌سازیم؛ جایی که استایل،
-              کیفیت و شخصیتِ منحصربه‌فرد تو در هر دوخت دیده می‌شود.
+              در فشنیتو، ما داریم دنیای مد را دوباره می‌سازیم؛ جایی که استایل،
+              کیفیت و شخصیت منحصربه‌فرد تو در هر دوخت دیده می‌شود.
             </p>
           </div>
 
@@ -59,7 +63,7 @@ function AboutPage() {
         </div>
 
         {/* Author & FAQ */}
-        <div className="flex flex-col-reverse lg:flex-row gap-8 py-6">
+        <div className="flex flex-col lg:flex-row gap-8 py-6">
           <div className="w-full lg:w-1/2">
             <div className="about-author flex items-center gap-5 text-right">
               <Image

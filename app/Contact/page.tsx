@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "تماس با ما",
+};
+
 export default function ContactPage() {
   return (
     <section>

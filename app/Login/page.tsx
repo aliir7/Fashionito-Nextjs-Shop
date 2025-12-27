@@ -2,6 +2,11 @@ import Breadcrumb from "@/Components/UI/Breadcrumb";
 import Image from "next/image";
 import loginImg from "@/public/assets/login-img.webp";
 import LoginForm from "@/Components/UI/Forms/LoginForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ورود",
+};
 
 function LoginPage() {
   return (

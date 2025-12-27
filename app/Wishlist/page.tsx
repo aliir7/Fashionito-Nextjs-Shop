@@ -11,6 +11,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { BsCart3, BsTrash3 } from "react-icons/bs";
 import Link from "next/link";
 import PageTitle from "@/Components/UI/PageTitle";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "علاقه‌مندی‌ها",
+};
 
 function WishlistPage() {
   const { wishlistItems, removeFromWishlist } = useWishlistStore();

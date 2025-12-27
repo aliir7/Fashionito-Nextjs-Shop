@@ -3,9 +3,14 @@ import Follow from "@/Components/UI/Index/Follow/Follow";
 import PageTitle from "@/Components/UI/PageTitle";
 import ProductDetails from "@/Components/UI/Product/ProductDetails";
 import ProductData from "@/lib/JsonData/ProductData.json";
+import { Metadata } from "next";
 
 type ProductDetailsPageProps = {
   params: Promise<{ id: string }>;
+};
+
+export const metadata: Metadata = {
+  title: "جزئیات محصول",
 };
 
 export default async function ProductDetailsPage({

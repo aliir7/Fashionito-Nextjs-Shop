@@ -2,6 +2,11 @@ import Breadcrumb from "@/Components/UI/Breadcrumb";
 import Image from "next/image";
 import loginImg from "@/public/assets/login-img.webp";
 import SignupForm from "@/Components/UI/Forms/SignupForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ثبت نام",
+};
 
 function RegistrationPage() {
   return (

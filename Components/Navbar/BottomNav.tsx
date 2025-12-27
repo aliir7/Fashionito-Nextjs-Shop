@@ -54,7 +54,7 @@ function BottomNav() {
             isFixed ? "lg:flex" : "hidden"
           }`}
         >
-          <span className="text-secondary">ito</span>Fashion
+          <span className="text-secondary">فشــ</span>نیتو
         </Link>
 
         {/* mobile logo */}
@@ -62,7 +62,7 @@ function BottomNav() {
           href="/"
           className="text-2xl me-4 lg:text-4xl font-bold text-black block lg:hidden"
         >
-          Fashion<span className="text-secondary">ito</span>
+          <span className="text-secondary">فشــ</span>نیتو
         </Link>
 
         {/* desktop nav */}

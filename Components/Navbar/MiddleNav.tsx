@@ -13,7 +13,7 @@ function MiddleNav() {
       <div className="flex items-center justify-between wrapper py-3">
         {/* logo */}
         <Link href="/" className="text-3xl lg:text-4xl font-bold text-black">
-          Fashion<span className="text-secondary">ito</span>
+          فش<span className="text-secondary">نیتو</span>
         </Link>
         {/* search box */}
         <div className="flex flex-1 relative flex-col  mx-6 bg-white rounded-lg lg:max-w-2xl">
